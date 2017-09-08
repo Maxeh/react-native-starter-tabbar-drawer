@@ -1,0 +1,26 @@
+{
+  "name": "starterApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "native-base": "2.2.1",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.46.4",
+    "react-native-i18n": "2.0.2",
+    "react-native-material-ripple": "0.7.3",
+    "react-navigation": "https://github.com/Maxeh/react-navigation.git"
+  },
+  "devDependencies": {
+    "babel-jest": "21.0.0",
+    "babel-preset-react-native": "3.0.2",
+    "jest": "21.0.1",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
