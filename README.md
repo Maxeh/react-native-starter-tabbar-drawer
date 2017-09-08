@@ -13,7 +13,7 @@ And that's how it looks like in the emulator:
 
 ![alt text](https://raw.githubusercontent.com/Maxeh/markdown/master/react-native-starter-tabbar-drawer/demo.gif)
 
-If you want to create your own app with only the code from this repo, than follow these steps:
+If you want to create your own app with only the code from this repo, then follow these steps:
 
 1) `react-native init YourAppName`
 2) `cd ./YourAppName`
