@@ -1,5 +1,5 @@
 # React-native-starter-tabbar-drawer
-Support: Android / iOS
+Support: Android / iOS   
 This starter package provides a simple and basic structure for a react-native app. It includes and/or extends the following packages:
 
 * [NativeBase](https://github.com/GeekyAnts/NativeBase)
