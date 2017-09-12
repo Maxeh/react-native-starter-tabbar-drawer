@@ -5,14 +5,12 @@ import React from 'react';
 
 import App  from './src/app';
 import AppTabs from './src/components/appTabs/appTabs';
-import TestScreen from './src/components/testScreen';
 
 import Drawer from './src/drawer';
 
 const Stack = {
   App: { screen: App },
   AppTabs: { screen: AppTabs },
-  TestScreen: { screen: TestScreen },
 };
 
 const DrawerRoutes = {

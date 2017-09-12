@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import {View, Text, StatusBar, TouchableOpacity} from 'react-native';
+import {View, StatusBar, TouchableOpacity} from 'react-native';
 import {Button, Icon} from 'native-base';
-import Ripple from 'react-native-material-ripple';
+import Tabbar from 'react-native-tabbar-bottom';
 
-import Tabs from './tabbar';
 import GLOBAL from '../../global';
-import I18n from '../../i18n';
 import HomeScreen from '../home/homeScreen';
 import NotificationsScreen from '../notifications/notificationsScreen';
 import ProfileScreen from '../profile/profileScreen';
@@ -27,7 +25,7 @@ export default class AppTabs extends Component {
     headerTintColor: '#FFF',
     title:
       (!!navigation.state.params && !!navigation.state.params.tabTitle) ?
-        navigation.state.params.tabTitle : I18n.t("tab_home_title")
+        navigation.state.params.tabTitle : "Home"
   });
 
   constructor() {
@@ -57,98 +55,44 @@ export default class AppTabs extends Component {
           backgroundColor={GLOBAL.COLOR.PRIMARY_DARK}
           barStyle="light-content"
         />
-        <Tabs
-          style={styles.tabBar}
-          selected={this.state.page}
-        >
-          <Ripple
-            rippleCentered={true} rippleDuration={280}
-            rippleColor={GLOBAL.COLOR.PRIMARY}
-            style={styles.tabButton} name="HomeScreen"
-            onPressOut={() => {
-              this.setState({page: "HomeScreen"});
-              this.props.navigation.setParams({tabTitle: I18n.t("tab_home_title")});
-            }}
-          >
-            <Icon
-              style={this.state.page === "HomeScreen" ? styles.tabSelectedIcon : styles.tabIcon}
-              name="home"
-            />
-            <Text style={this.state.page === "HomeScreen" ? styles.tabSelectedLabel : styles.tabLabel}>
-              {I18n.t("tab_home")}
-            </Text>
-          </Ripple>
 
-          <Ripple
-            rippleCentered={true} rippleDuration={280} rippleColor={GLOBAL.COLOR.PRIMARY}
-            style={styles.tabButton} name="NotificationScreen"
-            onPressOut={() => {
-              this.setState({page: "NotificationScreen"});
-              this.props.navigation.setParams({tabTitle: I18n.t("tab_notification_title")});
-            }}
-          >
-            <Icon
-              style={this.state.page === "NotificationScreen" ? styles.tabSelectedIcon : styles.tabIcon}
-              name="notifications"
-            />
-            <Text style={this.state.page === "NotificationScreen" ? styles.tabSelectedLabel : styles.tabLabel}>
-              {I18n.t("tab_notification")}
-            </Text>
-          </Ripple>
-
-          <Ripple
-            rippleCentered={true} rippleDuration={280} rippleColor={GLOBAL.COLOR.PRIMARY}
-            style={styles.tabButton} name="ProfileScreen"
-            onPressOut={() => {
-              this.setState({page: "ProfileScreen"});
-              this.props.navigation.setParams({tabTitle: I18n.t("tab_profile_title")});
-            }}
-          >
-            <Icon
-              style={this.state.page === "ProfileScreen" ? styles.tabSelectedIcon : styles.tabIcon}
-              name="person"
-            />
-            <Text style={this.state.page === "ProfileScreen" ? styles.tabSelectedLabel : styles.tabLabel}>
-              {I18n.t("tab_profile")}
-            </Text>
-          </Ripple>
-
-          <Ripple
-            rippleCentered={true} rippleDuration={280} rippleColor={GLOBAL.COLOR.PRIMARY}
-            style={styles.tabButton} name="ChatScreen"
-            onPressOut={() => {
-              this.setState({page: "ChatScreen"});
-              this.props.navigation.setParams({tabTitle: I18n.t("tab_chat_title")});
-            }}
-          >
-            <Icon
-              style={this.state.page === "ChatScreen" ? styles.tabSelectedIcon : styles.tabIcon}
-              name="chatbubbles"
-            />
-            <Text style={this.state.page === "ChatScreen" ? styles.tabSelectedLabel : styles.tabLabel}>
-              {I18n.t("tab_chat")}
-            </Text>
-          </Ripple>
-
-          <Ripple
-            rippleCentered={true}
-            rippleDuration={280}
-            rippleColor={GLOBAL.COLOR.PRIMARY}
-            style={styles.tabButton}
-            name="SearchScreen" onPressOut={() => {
-            this.setState({page: "SearchScreen"});
-            this.props.navigation.setParams({tabTitle: I18n.t("tab_search_title")});
+        <Tabbar
+          tabbarBgColor={GLOBAL.COLOR.PRIMARY}
+          stateFunc={(tab) => {
+            this.setState({page: tab.page})
+            this.props.navigation.setParams({tabTitle: tab.title})
           }}
-          >
-            <Icon
-              style={this.state.page === "SearchScreen" ? styles.tabSelectedIcon : styles.tabIcon}
-              name="search"
-            />
-            <Text style={this.state.page === "SearchScreen" ? styles.tabSelectedLabel : styles.tabLabel}>
-              {I18n.t("tab_search")}
-            </Text>
-          </Ripple>
-        </Tabs>
+          activePage={this.state.page}
+          tabs={[
+            {
+              page: "HomeScreen",
+              title: "Home",
+              icon: "home",
+            },
+            {
+              page: "NotificationScreen",
+              title: "Notifications",
+              icon: "notifications",
+              badgeNumber: 11,
+            },
+            {
+              page: "ProfileScreen",
+              title: "Profile",
+              icon: "person",
+            },
+            {
+              page: "ChatScreen",
+              title: "Chat",
+              icon: "chatbubbles",
+              badgeNumber: 7,
+            },
+            {
+              page: "SearchScreen",
+              title: "Search",
+              icon: "search",
+            },
+          ]}
+        />
       </View>
     );
   };

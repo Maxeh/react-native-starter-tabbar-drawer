@@ -3,7 +3,6 @@ import { View, StyleSheet, Text, TouchableWithoutFeedback, Image } from 'react-n
 import { Icon } from 'native-base';
 
 import GLOBAL from './global';
-import I18n from './i18n';
 
 export default class Drawer extends Component {
 
@@ -40,7 +39,7 @@ export default class Drawer extends Component {
               <View style={styles.buttonIcon}>
                 <Icon name='settings' style={{color: GLOBAL.COLOR.GRAY_5, fontSize: 34}}/>
               </View>
-              <Text style={styles.buttonText}>{I18n.t('drawer_settings')}</Text>
+              <Text style={styles.buttonText}>Settings</Text>
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -54,7 +53,7 @@ export default class Drawer extends Component {
               <View style={styles.buttonIcon}>
                 <Icon name='people' style={{color: GLOBAL.COLOR.GRAY_5, fontSize: 34}}/>
               </View>
-              <Text style={styles.buttonText}>{I18n.t('drawer_friends')}</Text>
+              <Text style={styles.buttonText}>Friends</Text>
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -70,7 +69,7 @@ export default class Drawer extends Component {
               <View style={styles.buttonIcon}>
                 <Icon name='help-buoy' style={{color: GLOBAL.COLOR.GRAY_5, fontSize: 34}}/>
               </View>
-              <Text style={styles.buttonText}>{I18n.t('drawer_support')}</Text>
+              <Text style={styles.buttonText}>Support</Text>
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -84,7 +83,7 @@ export default class Drawer extends Component {
               <View style={styles.buttonIcon}>
                 <Icon name='paper' style={{color: GLOBAL.COLOR.GRAY_5, fontSize: 34}}/>
               </View>
-              <Text style={styles.buttonText}>{I18n.t('drawer_licences')}</Text>
+              <Text style={styles.buttonText}>Licences</Text>
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -98,7 +97,7 @@ export default class Drawer extends Component {
               <View style={styles.buttonIcon}>
                 <Icon name='paper' style={{color: GLOBAL.COLOR.GRAY_5, fontSize: 34}}/>
               </View>
-              <Text style={styles.buttonText}>{I18n.t('drawer_site_notice')}</Text>
+              <Text style={styles.buttonText}>Site notice</Text>
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -112,7 +111,7 @@ export default class Drawer extends Component {
               <View style={styles.buttonIcon}>
                 <Icon name='paper' style={{color: GLOBAL.COLOR.GRAY_5, fontSize: 34}}/>
               </View>
-              <Text style={styles.buttonText}>{I18n.t('drawer_business_terms')}</Text>
+              <Text style={styles.buttonText}>Business terms</Text>
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -128,7 +127,7 @@ export default class Drawer extends Component {
               <View style={styles.buttonIcon}>
                 <Icon name='log-out' style={{color: GLOBAL.COLOR.GRAY_5, fontSize: 34}}/>
               </View>
-              <Text style={styles.buttonText}>{I18n.t('drawer_logout')}</Text>
+              <Text style={styles.buttonText}>Logout</Text>
             </View>
           </View>
         </TouchableWithoutFeedback>

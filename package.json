@@ -10,8 +10,7 @@
     "native-base": "2.2.1",
     "react": "16.0.0-alpha.12",
     "react-native": "0.46.4",
-    "react-native-i18n": "2.0.2",
-    "react-native-material-ripple": "0.7.3",
+    "react-native-tabbar-bottom": "^1.0.4",
     "react-navigation": "https://github.com/Maxeh/react-navigation.git"
   },
   "devDependencies": {
