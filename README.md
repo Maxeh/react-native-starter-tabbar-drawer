@@ -5,13 +5,11 @@ This starter package provides a simple and basic structure for a react-native ap
 
 * [NativeBase](https://github.com/GeekyAnts/NativeBase)
 * [Navigation](https://github.com/react-community/react-navigation)
-* [Ripple Effect](https://github.com/n4kz/react-native-material-ripple)
-* [Tabs](https://github.com/aksonov/react-native-tabs)
-* [i18n](https://github.com/AlexanderZaytsev/react-native-i18n) 
+* [Tabbar bottom](https://github.com/n4kz/react-native-material-ripple) 
 
 And that's how it looks like in the emulator:
 
-![alt text](https://raw.githubusercontent.com/Maxeh/markdown/master/react-native-starter-tabbar-drawer/demo.gif)
+![demo](https://raw.githubusercontent.com/Maxeh/markdown/master/react-native-starter-tabbar-drawer/demo.gif)
 
 If you want to create your own app with only the code from this repo, then follow these steps:
 
